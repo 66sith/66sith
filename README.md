@@ -12,10 +12,10 @@ status     ▸ online · 5 nodes · zero cloud dependence
 
 ---
 
-I run **Sam** — a multi-node local AI cluster I designed and operate from a homelab.
-Everything runs on hardware I own. No cloud inference. No telemetry leaving the network.
-The cluster is built and maintained by coordinated coding agents under my direction;
-I'm the architect and the operator, not the typist.
+I run **Sam** — a multi-node local AI cluster I designed and operate on private
+infrastructure. Everything runs on hardware I own. No cloud inference. No telemetry
+leaving the network. The cluster is built and maintained by coordinated coding agents
+under my direction; I'm the architect and the operator, not the typist.
 
 I started this because I wanted an assistant that was actually mine — that could
 remember things across sessions, run my pipelines, watch my infrastructure, talk to me
