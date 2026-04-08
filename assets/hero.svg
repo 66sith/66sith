@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Sam — sovereign local AI cluster">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="50%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#39d353" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39d353"/>
+      <stop offset="60%" stop-color="#26a641"/>
+      <stop offset="100%" stop-color="#0e4429" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+
+  <!-- Connection lines (cluster topology) -->
+  <g stroke="#26a641" stroke-width="1.2" opacity="0.55" fill="none">
+    <!-- Orchestrator (center) to 4 inference nodes -->
+    <line x1="600" y1="170" x2="240" y2="100"/>
+    <line x1="600" y1="170" x2="240" y2="240"/>
+    <line x1="600" y1="170" x2="960" y2="100"/>
+    <line x1="600" y1="170" x2="960" y2="240"/>
+    <!-- Mesh between inference nodes -->
+    <line x1="240" y1="100" x2="960" y2="100"/>
+    <line x1="240" y1="240" x2="960" y2="240"/>
+    <line x1="240" y1="100" x2="240" y2="240"/>
+    <line x1="960" y1="100" x2="960" y2="240"/>
+  </g>
+
+  <!-- Pulsing connection (animated) -->
+  <g stroke="url(#sig)" stroke-width="2.5" fill="none" opacity="0.9">
+    <line x1="240" y1="100" x2="960" y2="240">
+      <animate attributeName="opacity" values="0;0.9;0" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="960" y1="100" x2="240" y2="240">
+      <animate attributeName="opacity" values="0;0.9;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Inference nodes -->
+  <g filter="url(#glow)">
+    <circle cx="240" cy="100" r="14" fill="url(#node)">
+      <animate attributeName="r" values="12;15;12" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="240" r="14" fill="url(#node)">
+      <animate attributeName="r" values="12;15;12" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="960" cy="100" r="14" fill="url(#node)">
+      <animate attributeName="r" values="12;15;12" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="960" cy="240" r="14" fill="url(#node)">
+      <animate attributeName="r" values="12;15;12" dur="4s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Orchestrator node (center, larger) -->
+  <g filter="url(#glow)">
+    <circle cx="600" cy="170" r="26" fill="url(#node)"/>
+    <circle cx="600" cy="170" r="26" fill="none" stroke="#39d353" stroke-width="1.5" opacity="0.6">
+      <animate attributeName="r" values="26;42;26" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Node labels -->
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10" fill="#7d8590">
+    <text x="240" y="78" text-anchor="middle">node-01</text>
+    <text x="240" y="266" text-anchor="middle">node-02</text>
+    <text x="960" y="78" text-anchor="middle">node-03</text>
+    <text x="960" y="266" text-anchor="middle">node-04</text>
+    <text x="600" y="220" text-anchor="middle" fill="#39d353">orchestrator</text>
+  </g>
+
+  <!-- Title block -->
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" fill="#e6edf3">
+    <text x="600" y="60" font-size="14" font-weight="400" text-anchor="middle" fill="#7d8590" letter-spacing="6">SOVEREIGN · LOCAL · MULTI-NODE</text>
+    <text x="600" y="135" font-size="58" font-weight="700" text-anchor="middle" letter-spacing="8" fill="#e6edf3">SAM</text>
+  </g>
+
+  <!-- Bottom signature line -->
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" fill="#7d8590">
+    <text x="600" y="305" text-anchor="middle">$ ssh al@sam.local — operator: 66sith</text>
+  </g>
+</svg>
