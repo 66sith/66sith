@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="Sam cluster metrics">
+  <defs>
+    <linearGradient id="mbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffa3"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+    <filter id="mglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="260" fill="url(#mbg)"/>
+
+  <!-- Section title -->
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,monospace">
+    <text x="20" y="30" font-size="11" fill="#7d8590" letter-spacing="2">▸ cluster.metrics.live</text>
+    <line x1="20" y1="38" x2="1180" y2="38" stroke="#21262d" stroke-width="1"/>
+  </g>
+
+  <!-- Card 1: Nodes -->
+  <g>
+    <rect x="20" y="55" width="220" height="180" rx="6" fill="url(#card)" stroke="#21262d"/>
+    <text x="40" y="80" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="10" fill="#7d8590" letter-spacing="1">NODES</text>
+    <text x="40" y="155" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="80" fill="url(#accent)" font-weight="800" filter="url(#mglow)">5</text>
+    <text x="40" y="180" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="11" fill="#39d353">● all online</text>
+    <text x="40" y="200" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">orchestrator + 4 workers</text>
+    <text x="40" y="215" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">uptime: continuous</text>
+  </g>
+
+  <!-- Card 2: Models -->
+  <g>
+    <rect x="255" y="55" width="220" height="180" rx="6" fill="url(#card)" stroke="#21262d"/>
+    <text x="275" y="80" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="10" fill="#7d8590" letter-spacing="1">INFERENCE</text>
+    <text x="275" y="155" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="60" fill="url(#accent)" font-weight="800" filter="url(#mglow)">llama</text>
+    <text x="275" y="180" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="11" fill="#39d353">● .cpp · GGUF</text>
+    <text x="275" y="200" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">q6/q8 quantization</text>
+    <text x="275" y="215" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">orchestrator: nemotron-8b</text>
+  </g>
+
+  <!-- Card 3: Data Sovereignty -->
+  <g>
+    <rect x="490" y="55" width="220" height="180" rx="6" fill="url(#card)" stroke="#21262d"/>
+    <text x="510" y="80" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="10" fill="#7d8590" letter-spacing="1">CLOUD DEPENDENCE</text>
+    <text x="510" y="155" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="80" fill="url(#accent)" font-weight="800" filter="url(#mglow)">0</text>
+    <text x="510" y="180" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="11" fill="#39d353">● sovereign</text>
+    <text x="510" y="200" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">inference stays local</text>
+    <text x="510" y="215" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">data stays local</text>
+  </g>
+
+  <!-- Card 4: Agents -->
+  <g>
+    <rect x="725" y="55" width="220" height="180" rx="6" fill="url(#card)" stroke="#21262d"/>
+    <text x="745" y="80" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="10" fill="#7d8590" letter-spacing="1">AGENT SESSIONS</text>
+    <text x="745" y="155" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="80" fill="url(#accent)" font-weight="800" filter="url(#mglow)">2k+</text>
+    <text x="745" y="180" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="11" fill="#39d353">● 4 months</text>
+    <text x="745" y="200" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">claude · cursor · others</text>
+    <text x="745" y="215" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">agent-driven development</text>
+  </g>
+
+  <!-- Card 5: Wake state -->
+  <g>
+    <rect x="960" y="55" width="220" height="180" rx="6" fill="url(#card)" stroke="#21262d"/>
+    <text x="980" y="80" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="10" fill="#7d8590" letter-spacing="1">WAKE-WORD</text>
+    <text x="980" y="155" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="60" fill="url(#accent)" font-weight="800" filter="url(#mglow)">"Sam"</text>
+    <text x="980" y="180" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="11" fill="#39d353">
+      ● listening
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="980" y="200" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">persona: female</text>
+    <text x="980" y="215" font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="9" fill="#7d8590">always-on I/O pipeline</text>
+  </g>
+</svg>

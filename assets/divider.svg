@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" width="1200" height="40" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="dline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffa3" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#39d353" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00d4ff" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#39d353" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00ffa3" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="dglow" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="40" fill="#010409"/>
+  <line x1="0" y1="20" x2="1200" y2="20" stroke="url(#dline)" stroke-width="2" filter="url(#dglow)"/>
+  <line x1="0" y1="20" x2="1200" y2="20" stroke="url(#dline)" stroke-width="1"/>
+  <g fill="#39d353">
+    <circle cx="600" cy="20" r="3">
+      <animate attributeName="r" values="2;5;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,monospace" font-size="8" fill="#484f58">
+    <text x="20" y="24">◢</text>
+    <text x="1180" y="24" text-anchor="end">◣</text>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="1200" height="140" role="img" aria-label="Sam footer">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#010409"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="faccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffa3"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+    <filter id="fglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="140" fill="url(#fbg)"/>
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="#21262d"/>
+  <g font-family="'JetBrains Mono','SF Mono',Menlo,monospace">
+    <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="800" fill="url(#faccent)" filter="url(#fglow)" letter-spacing="6">66sith</text>
+    <text x="600" y="80" text-anchor="middle" font-size="11" fill="#7d8590" letter-spacing="4">OPERATOR · ARCHITECT · AGENT COMMANDER</text>
+    <text x="600" y="105" text-anchor="middle" font-size="9" fill="#484f58">Sam is listening. Al is building.</text>
+    <text x="600" y="124" text-anchor="middle" font-size="9" fill="#484f58">▸ all systems nominal · 5/5 · on-prem · sovereign ◂</text>
+  </g>
+  <g fill="#39d353">
+    <circle cx="450" cy="122" r="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="122" r="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
